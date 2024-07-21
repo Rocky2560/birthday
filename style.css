@@ -5,8 +5,7 @@
     position: fixed;
     left: 50%;
     top: 45%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: center no-repeat #fff;
     z-index: 9999999999999999999999;
     font-size: 50px;
@@ -46,8 +45,8 @@
 
 .loader {
     position: fixed;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 999;
@@ -100,15 +99,12 @@ img {
     0% {
         transform: rotateZ(0);
     }
-
     25% {
         transform: rotateZ(10deg);
     }
-
     50% {
         transform: rotateZ(0deg);
     }
-
     75% {
         transform: rotateZ(-10deg);
     }
@@ -117,13 +113,54 @@ img {
 .type-wrap {
     font-size: 25px;
     color: #C4515C;
-
 }
 
 .cake {
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     position: absolute;
     padding-top: 250px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .loader button {
+        width: 80%;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .area {
+        font-size: 50px;
+        letter-spacing: -5px;
+    }
+
+    .type-wrap {
+        font-size: 20px;
+    }
+
+    .cake {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loader button {
+        width: 90%;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .area {
+        font-size: 40px;
+        letter-spacing: -3px;
+    }
+
+    .type-wrap {
+        font-size: 18px;
+    }
+
+    .cake {
+        padding-top: 100px;
+    }
 }
